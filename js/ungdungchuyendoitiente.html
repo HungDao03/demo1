@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+VND
+<input type="number" value="" id="n">
+Các Loại Tiền Tệ
+<select id="b">
+    <option value=" Đô La Mỹ "> Đô La Mỹ</option>
+    <option value=" Won "> Won</option>
+    <option value=" Yên "> Yên</option>
+    <option value=" Bảng Anh "> Bảng Anh</option>
+</select>
+<button onclick="chuyen()">Chuyển Đổi</button>
+<div id="result"></div>
+
+<script>
+    function chuyen() {
+        let vnd = document.getElementById("n").value;
+        let b = document.getElementById("b").value.trim();
+        let result;
+
+        switch (b) {
+            case "Đô La Mỹ":
+                result = vnd * 0.025;
+                break;
+            case "Won":
+                result = vnd * 0.054;
+                break;
+            case "Yên":
+                result = vnd * 0.06;
+                break;
+            case "Bảng Anh":
+                result = vnd * 0.031;
+                break;
+        }
+
+        document.getElementById("result").innerHTML = "Số tiền chuyển đổi là: " + result;
+    }
+</script>
+</body>
+</html>

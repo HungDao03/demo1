@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập điểm bài kiểm tra");
+    let b = +prompt("Nhập điểm thi giữa kỳ");
+    let c = +prompt("Nhập điểm thi cuối kỳ");
+    let hocluc = ( a + b + c) / 3
+    if (hocluc < 5) {
+        console.log("Yếu");
+    } else if (hocluc < 6.5) {
+        console.log("Trung Bình");
+    } else if (hocluc < 8) {
+        console.log("Khá");
+    } else {
+        console.log("Giỏi");
+    }
+</script>
+</body>
+</html>

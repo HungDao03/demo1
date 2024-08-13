@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 40px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<input type="number" id="num" value="">x<sup>2</sup> +
+<input type="number" id="num1" value=""> x
+<input type="number" id="num2" value="">
+<button onclick="ketqua()"> Kết Quả</button>
+<div id="result"></div>
+<script>
+    function ketqua() {
+        let a = +document.getElementById("num").value;
+        let b = +document.getElementById("num1").value;
+        let c = +document.getElementById("num2").value;
+        let d = (b * b) - 4 * a * c
+        let x;
+        let x1;
+        let x2;
+        if (a === 0 && b === 0) {
+            document.getElementById("result").innerHTML = "Phương trình vô số nghiệm "
+        } else {
+            if (d < 0) {
+                document.getElementById("result").innerHTML = "Phương trình vô nghiệm"
+            } else if (d === 0) {
+                x = -b / (2 * a);
+                document.getElementById("result").innerHTML = "Phương trình có nghiệm kép x1 = x2 = " + x;
+            } else {
+                x1 = (-b + (Math.sqrt(d))) / 2 * a;
+                x2 = (-b - (Math.sqrt(d))) / 2 * a;
+                document.getElementById("result").innerHTML = "Phương trình có 2 nghiệm là " + x1 + x2;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

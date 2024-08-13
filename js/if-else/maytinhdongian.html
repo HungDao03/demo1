@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         td {
+            width: 40px;
+            height: 20px;
+        }
+        button {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<input type="text"  id="nhap">
+<table>
+    <tr>
+        <td><button onclick="bam()" value="1">1</button></td>
+        <td><button onclick="bam()" value="2">2</button></td>
+        <td><button onclick="bam()" value="3">3</button></td>
+        <td><button onclick="bam()" value="+">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="bam()" value="4">4</button></td>
+        <td><button onclick="bam()" value="5">5</button></td>
+        <td><button onclick="bam()" value="6">6</button></td>
+        <td><button onclick="bam()" value="-">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="bam()" value="7">7</button></td>
+        <td><button onclick="bam()" value="8">8</button></td>
+        <td><button onclick="bam()" value="9">9</button></td>
+        <td><button onclick="bam()" value="*">*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="bam()" value="xoa" id="xoa()">Xoa</button></td>
+        <td><button onclick="bam()" value="0">0</button></td>
+        <td><button onclick="bam()" value="=">=</button></td>
+        <td><button onclick="bam()" value="/">/</button></td>
+    </tr>
+</table>
+<script>
+    let nhap = document.getElementById("nhap");
+    function bam() {
+        nhap.value += value;
+    }
+    function result() {
+        let resulut =eval(view.value);
+        nhap.value = result;
+    }
+    function xoa() {
+        nhap.value=""
+    }
+</script>
+</body>
+</html>

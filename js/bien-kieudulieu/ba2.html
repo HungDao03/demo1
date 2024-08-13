@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Độ C
+<input type="number" id="C" value="">
+<button onclick="fahrenheit()">Chuyển Đổi</button>
+<div id="result"></div>
+
+<script>
+    function fahrenheit() {
+        let a = document.getElementById('C').value;
+
+        if (a ) {
+            let f = (a / 5 * 9 + 32);
+            document.getElementById('result').innerHTML = "Độ F = " + f ;
+        } else {
+            alert("Vui lòng nhập độ C");
+        }
+    }
+</script>
+</body>
+</html>

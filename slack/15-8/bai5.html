@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" value="" id="so1">
+<input type="number" value="" id="so2">
+<button onclick="check()">Ước Chung</button>
+<div id="result"></div>
+<script>
+function check() {
+    let a = document.getElementById("so1").value;
+    let b = document.getElementById("so2").value;
+    let result = ""
+    for (let i = 1; i <= a; i++){
+        if (a % i === 0 && b % i === 0){
+           result += i + ", "
+        }
+    }
+    document.getElementById("result").innerHTML =`Ước chung của ${a} và ${b} là: ${result}`
+}
+
+</script>
+</body>
+</html>

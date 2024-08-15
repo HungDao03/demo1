@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1px" id="content">
+</table>
+<script>
+    let sout = "";
+    for (i = 1; i < 10; i++) {
+        sout += "<tr>"
+        for (j = 2; j < 10; j++) {
+            sout += `<td>${j}*${i} = ${i * j} </td>`
+        }
+        sout += "</tr>"
+    }
+    document.getElementById("content").innerHTML = sout;
+
+
+    // let sout, i, j ;
+    // sout = "<table border='1'>"
+    // for ( i = 1; i < 10; i++){
+    //     sout += "<tr>"
+    //     for ( j = 2; j < 10; j++){
+    //         sout += `<td>${j}*${i} = ${i*j} </td>`
+    //         }
+    //
+    //     sout += "</tr>"
+    // }
+    // sout += "</table>"
+    // document.write(sout);
+
+</script>
+</body>
+</html>

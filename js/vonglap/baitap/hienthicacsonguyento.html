@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//     let n = +prompt("Nhập số nguyên tố")
+//     let check = true;
+//     if (n === 2) {
+//         check = true;
+//     } else {
+//         for (let i = 2; i < n; i++){
+//             if (n % i ===0){
+//                 check = false
+//                 break;
+//             } else {
+//                 check = true
+//
+//             }
+//         }
+//     }
+// if (check){
+//     alert(n + "Số nguyên tố")
+// } else {
+//     alert(n + "khong phai snt")
+// }
+
+let a = +prompt("nhập số") // nhập số 4 thì ra 4 số nguyên tố
+let count = 0;
+let j = 2;
+let check = true;
+while (count < a) {
+    if (j === 2) {
+        check = true;
+    } else {
+        for (let i = 2; i < j; i++) {
+            if (j % i === 0) {
+                check = false
+                break;
+            } else {
+                check = true
+            }
+        }
+    }
+    if (check){
+        count++;
+        document.write(j + '<br>')
+    }
+    j++;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =+prompt("Số thu nhập");
+    let b = 0;
+    if (a < 5000000) {
+        b += a * 0.05;
+    } else if (a <= 10000000) {
+        b += a * 0.1;
+    } else if (a <= 20000000) {
+        b += a * 0.2;
+    } else {
+        b += a *0.3;
+    }
+    document.write("Số tiền thuế theo thu nhập là " + b)
+</script>
+</body>
+</html>

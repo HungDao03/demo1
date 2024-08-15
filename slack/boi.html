@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<body>
+<table>
+    <tr>
+        <td>Tuổi Nam</td>
+        <td><input type="number" value="" placeholder="Nhập năm sinh" id="nam"></br></td>
+    </tr>
+    <tr>
+        <td>Tuổi Nữ</td>
+        <td><input type="number" value="" placeholder="Nhập năm sinh" id="nu"></br></td>
+    </tr>
+    <tr>
+        <td><button onclick="xem()">Kiểm tra</button></td>
+    </tr>
+    <tr>
+        <td colspan="2"><div id="result"></div></td>
+    </tr>
+</table>
+
+<script>
+    function xem() {
+        let a = document.getElementById("nam").value
+        let b = document.getElementById("nu").value
+        let c = a % 12
+        let d = b % 12
+        let e = (a - 4) % 10
+        let f = (b - 4) % 10
+        let tuoinam = ""
+        let tuoinu = ""
+        let chiMen = ""
+        let chiWoman = ""
+        let resut = ""
+        switch (c) {
+            case 0:
+                tuoinam = "Thân"
+                break;
+            case 1:
+                tuoinam = "Dậu"
+                break;
+            case 2:
+                tuoinam = "Tuất"
+                break;
+            case 3:
+                tuoinam = "Hợi"
+                break;
+            case 4:
+                tuoinam = "Tý"
+                break;
+            case 5:
+                tuoinam = "Sửu"
+                break;
+            case 6:
+                tuoinam = "Dần"
+                break;
+            case 7:
+                tuoinam = "Mão"
+                break;
+            case 8:
+                tuoinam = "Thìn"
+                break;
+            case 9:
+                tuoinam = "Tị"
+                break;
+            case 10:
+                tuoinam = "Ngọ"
+                break;
+            case 11:
+                tuoinam = "Mùi"
+                break;
+        }
+        switch (d) {
+            case 0:
+                tuoinu = "Thân"
+                break;
+            case 1:
+                tuoinu = "Dậu"
+                break;
+            case 2:
+                tuoinu = "Tuất"
+                break;
+            case 3:
+                tuoinu = "Hợi"
+                break;
+            case 4:
+                tuoinu = "Tý"
+                break;
+            case 5:
+                tuoinu = "Sửu"
+                break;
+            case 6:
+                tuoinu = "Dần"
+                break;
+            case 7:
+                tuoinu = "Mão"
+                break;
+            case 8:
+                tuoinu = "Thìn"
+                break;
+            case 9:
+                tuoinu = "Tị"
+                break;
+            case 10:
+                tuoinu = "Ngọ"
+                break;
+            case 11:
+                tuoinu = "Mùi"
+                break;
+        }
+        switch (e) {
+            case 0:
+                chiMen = "Giáp";
+                break;
+            case 1:
+                chiMen = "Ất";
+                break;
+            case 2:
+                chiMen = "Bính";
+                break;
+            case 3:
+                chiMen = "Đinh";
+                break;
+            case 4:
+                chiMen = "Mậu";
+                break;
+            case 5:
+                chiMen = "Kỷ";
+                break;
+            case 6:
+                chiMen = "Canh";
+                break;
+            case 7:
+                chiMen = "Tân";
+                break;
+            case 8:
+                chiMen = "Nhâm";
+                break;
+            case 9:
+                chiMen = "Quý";
+                break;
+        }
+        switch (f) {
+            case 0:
+                chiWoman = "Giáp";
+                break;
+            case 1:
+                chiWoman = "Ất";
+                break;
+            case 2:
+                chiWoman = "Bính";
+                break;
+            case 3:
+                chiWoman = "Đinh";
+                break;
+            case 4:
+                chiWoman = "Mậu";
+                break;
+            case 5:
+                chiWoman = "Kỷ";
+                break;
+            case 6:
+                chiWoman = "Canh";
+                break;
+            case 7:
+                chiWoman = "Tân";
+                break;
+            case 8:
+                chiWoman = "Nhâm";
+                break;
+            case 9:
+                chiWoman = "Quý";
+                break;
+        }
+        if (tuoinam === "Dần" && tuoinu === "Dần" || tuoinam === "Dần" && tuoinu === "Thân" || tuoinam === "Dần" && tuoinu === "Tị" || tuoinam === "Dần" && tuoinu === "Hợi") {
+            resut = "tuổi tứ hành xung"
+        } else if (tuoinam === "Thân" && tuoinu === "Dần" || tuoinam === "Thân" && tuoinu === "Thân" || tuoinam === "Thân" && tuoinu === "Tị" || tuoinam === "Thân" && tuoinu === "Hợi") {
+            resut = "tuổi tứ hành xung"
+        } else if (tuoinam === "Tị" && tuoinu === "Dần" || tuoinam === "Tị" && tuoinu === "Thân" || tuoinam === "Tị" && tuoinu === "Tị" || tuoinam === "Tị" && tuoinu === "Hợi") {
+            resut = "tuổi tứ hành xung"
+        } else if (tuoinam === "Hợi" && tuoinu === "Dần" || tuoinam === "Hợi" && tuoinu === "Thân" || tuoinam === "Hợi" && tuoinu === "Tị" || tuoinam === "Hợi" && tuoinu === "Hợi") {
+            resut = "tuổi tứ hành xung"
+        } else {
+            resut = "tuổi không tứ hành xung"
+        }
+
+        let v = "Tuổi của nam là " + chiMen + "" + tuoinam + "</br>"
+            + "Tuổi của nữ là " + chiWoman + "" + tuoinu + "</br>"
+            + resut;
+        document.getElementById("result").innerHTML = v;
+    }
+</script>
+
+</body>
+</html>
